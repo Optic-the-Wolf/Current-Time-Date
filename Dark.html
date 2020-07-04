@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title> Date & Time - Dark Theme  </title>
+</head>
+<body style="background-color:black">
+<a href="https://itac85.github.io/Current-Time-Date/index.html">Light Theme</a>
+<div> </div>
+<h1 style="color:white;"> Date: (MM/DD/YYYY) </h1>
+<p style="color:white;"> The current date is <span id="datetime"></span> </p>
+<script>
+var dt = new Date()
+document.getElementById("datetime").innerHTML = dt.toLocaleDateString();
+</script>
+<div> </div>
+<h1 style="color:white;"> Date: (DD.MM.YYYY) </h1>
+<p style="color:white;"> The current date is <span id="date2"></span> </p>
+<script>
+var dt = new Date();
+document.getElementById("date2").innerHTML = (("0"+dt.getDate()).slice(-2)) +":"+(("0"+(dt.getMonth()+1)).slice(-2)) +"."+(dt.getFullYear())
+</script>
+<div> </div>
+<h1 style="color:white;"> Time: </h1>
+<p style="color:white;"> The current time is <span id="time"></span> </p>
+<script>
+var dt = new Date();
+document.getElementById("time").innerHTML = dt.toLocaleTimeString();
+</script>
+<div> </div>
+<button onClick="history.go(0);">Refresh Page</button>
+<div> </div>
+<p> </p>
+<a style="color:white;"> <b> Problems with the site? <b> <br> Click </a>
+<a href="https://github.com/ITAC85/Current-Time-Date/issues"> here </a>
+<a style="color:white;"> to report a bug on the site </a>
+<div> </div>
+<p> </p>
+<a href="https://github.com/ITAC85/Current-Time-Date/releases/download/v1.0/TimeAndDateDownload.html"> Download website in an HTML (Offline usage) </a>
+</body>
+</html>
