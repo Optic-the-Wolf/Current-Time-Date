@@ -1,41 +1,50 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title> Date & Time - Light Theme </title>
+<title> Date & TIme </title>
+<style>
+body {
+  font-family: Arial, Verdana, Segoe UI, Calibri;
+}
+</style>
 </head>
-<body style="background-color:white">
-<a href="https://itac85.github.io/Current-Time-Date/Dark.html"> Dark Theme </a>
-<a> </a>
-<div> </div>
-<h1> Date: (MM/DD/YYYY) </h1>
-<p> The current date is <span id="datetime"></span> </p>
-<script>
-var dt = new Date()
-document.getElementById("datetime").innerHTML = dt.toLocaleDateString();
-</script>
-<div> </div>
-<h1> Date: (DD.MM.YYYY) </h1>
-<p> The current date is <span id="date2"></span> </p>
-<script>
-var dt = new Date();
-document.getElementById("date2").innerHTML = (("0"+dt.getDate()).slice(-2)) +":"+(("0"+(dt.getMonth()+1)).slice(-2)) +"."+(dt.getFullYear())
-</script>
-<div> </div>
-<h1> Time: </h1>
+<body>
+
+<center>
+
+<h2> Date </h2>
+<p> The current date in the MM/DD/YYYY format is <span id="date"></span> </p>
+<p> The current date in the DD/MM/YYYY format is <span id="date2"></span> </p>
+
+<hr>
+
+<h2> Time </h2>
 <p> The current time is <span id="time"></span> </p>
+<button onclick="history.go(0);">Refresh Webpage</button>
+
+<noscript>
+<p></p>
+<hr>
+<h3> Javascript is disbaled. </h3>
+<a> This website needs JavaScript to function properly. <br> Please enable JavaScript to properly use this website. </a>
+</noscript>
+
+</center>
+
 <script>
 var dt = new Date();
 document.getElementById("time").innerHTML = dt.toLocaleTimeString();
 </script>
-<div> </div>
-<button onClick="history.go(0);">Refresh Page</button>
-<div> </div>
-<p> </p>
-<a> <b> Problems with the site? <b> <br> Click </a>
-<a href="https://github.com/ITAC85/Current-Time-Date/issues"> here </a>
-<a> to report a bug on the site </a>
-<div> </div>
-<p> </p>
-<a href="https://github.com/ITAC85/Current-Time-Date/releases/download/v1.0/TimeAndDateDownload.html"> Download website in an HTML (Offline usage) </a>
+
+<script>
+var dt = new Date();
+document.getElementById("date2").innerHTML = (("0"+dt.getDate()).slice(-2)) +"/"+(("0"+(dt.getMonth()+1)).slice(-2)) +"/"+(dt.getFullYear())
+</script>
+
+<script>
+var dt = new Date()
+document.getElementById("date").innerHTML = dt.toLocaleDateString();
+</script>
+
 </body>
 </html>
